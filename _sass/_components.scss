@@ -1,0 +1,69 @@
+/* profile */
+.about {
+	margin-top: 1em;
+}
+.profile-content {
+    position: relative;
+}
+figure {
+    padding: 4em 1em;
+}
+.text {
+    background: rgba(200, 221, 142, .9);
+    margin-left: 180px;
+    padding: 2em;
+    max-width: 700px;
+	max-height: 540px;
+	overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    h2 {
+        color: #fff;
+        font-size: em(40);
+        margin-top: 0;
+    }
+	h3 {
+		font-size: 1em;
+	}
+}
+
+/* well */
+.well {
+	background: rgba(200, 221, 142, .9);
+	padding: .1px 5% 1em 5%;
+}
+
+/* buttons */
+.button {
+	display: inline-block;
+	background: $blue;
+	color: #fff;
+    font-size: 1.2em;
+	padding: 0.5em 2em;
+	margin: 0.5em 0;
+	text-decoration: none;
+    border-radius: 3px;
+    transition: box-shadow 0.5s ease;
+	&.download:after {
+		content: "\21a7";
+		margin-left: 3px;
+	}
+	&:hover {
+		box-shadow: 3px 3px 0 #ccc;
+	}
+    &:active {
+        box-shadow: none;
+    }
+}
+
+/* cirriculum */
+.cirriculum {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	&> section {
+		width: 50%;
+		padding: 0 3em 0 0;
+	}
+}

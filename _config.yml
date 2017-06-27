@@ -1,0 +1,11 @@
+baseurl: /conducting-investigations #e.g. /sub-site
+GA-id:  #Google analytics site id, if null analytics code won't output
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "default"
+      lang: "en"

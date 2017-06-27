@@ -1,0 +1,51 @@
+.site-header {
+    background-color: #f1f1f1;
+    background-image: url('../img/lab-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: center;
+    height: 50vh;
+    min-height: 240px;
+    max-height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .heading {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .heading h1,
+    .heading .siteHeading {
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-size: 44/16*1em;
+        font-weight: 700;
+        margin: 1rem 0 0.5rem 0;
+        color: $red;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 0.5em 1em;
+        @media only screen and (min-width: 37.5em) {
+            font-size: 52/16*1em;
+        }
+        @media only screen and (min-width: 64em) {
+            font-size: 60/16*1em;
+        }
+    }
+    .heading p {
+        max-width: 100%;
+        font-size: 1.7em;
+        font-weight: 100;
+        margin-top: 0;
+        background: rgba(130, 181, 76, 0.8);
+        color: #fff;
+        padding: 0 5px;
+        margin: 0 1rem;
+    }
+    @media only screen and (min-width: 1667px) {
+        background-size: auto;
+    }
+}

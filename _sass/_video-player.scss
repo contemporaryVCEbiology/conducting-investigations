@@ -1,0 +1,97 @@
+.video-player {
+    margin-bottom: 2em;
+    h2 {
+        line-height: 0.7; 
+        margin-bottom: 0;
+    }
+    [role="tablist"] {
+        position: static;
+        z-index: 1;
+        counter-reset: tabnumber;
+        width: em(40);
+        @media only screen and (min-width: em(800)) {
+            width: 25%;
+        }
+        float: left;
+        background: $darkgreen;
+        button {
+            width: 100%;
+            overflow: hidden;
+            border: 0;
+            background: none;
+            text-align: left;
+            padding: 0;
+            white-space: nowrap;
+            line-height: 1;
+            &[aria-selected="true"] {
+                background: $green;
+            }
+            &:before {
+                counter-increment: tabnumber;
+                content: counter(tabnumber);
+                display: inline-block;
+                text-align: center;
+                width: 100%;
+                padding: em(12) 0;
+                @media only screen and (min-width: em(800)) {
+                    content: "Part " counter(tabnumber) " - ";
+                    display: inline;
+                }
+            }
+            @media only screen and (min-width: em(800)) {
+                padding: 1em;
+                white-space: normal;
+            }
+        }
+    }
+    .tabpanels {
+        margin-left: 25%;
+        background: $green;
+    }
+    [role="tabpanel"] {
+        padding: 5%;
+        h3 {
+          margin-top: 0;  
+        }
+    }
+}
+.flexbox .video-player {
+    .tabs {
+        display: flex;
+    }
+    [role="tablist"] {
+        @media only screen and (min-width: em(800)) {
+            flex: 1;
+        }
+        float: none;
+    }
+    .tabpanels {
+        margin-left: 0;
+        @media only screen and (min-width: em(800)) {
+            flex: 3;
+        }
+    }
+}
+
+/*** video ***/
+/* http://alistapart.com/article/creating-intrinsic-ratios-for-video */
+.vid-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    width: 100%;
+}
+.vid-wrapper {
+    video, iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+figure.vid-wrapper {
+    margin: 2em 0;
+}
+/* end http://alistapart.com/article/creating-intrinsic-ratios-for-video */

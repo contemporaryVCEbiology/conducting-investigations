@@ -1,0 +1,28 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    @media only screen and (min-width: 64em) {
+        padding-top: 50px;
+    }
+    &.home {
+        padding-top: 0;
+    }
+}
+
+figure {
+    margin: 1em 0;
+}
+
+/* helpers */
+.center-align {
+    text-align: center;
+}

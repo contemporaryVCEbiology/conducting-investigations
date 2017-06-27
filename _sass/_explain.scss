@@ -1,0 +1,142 @@
+.explain {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 30em;
+    button {
+        color: white;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.explain-menu-toggle {
+    position: relative;
+    width: 100%;
+    background: $blue;
+    border: 0;
+    font-size: 1.6em;
+    padding: 0.5em 0;
+    &.open:after {
+        content: "\2716";
+        position: absolute;
+        right: 0.5em;
+    }
+}
+.explain-menu {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    transition: bottom 0.5s ease-in;
+    &.open {
+        bottom: 100%;
+    }
+    button {
+        display: inline;
+        position: relative;
+        border: 0;
+        margin: 0;
+        background: $purple;
+        width: 1/3*100%;
+        padding: 0.5em 0;
+        &:nth-child(even) {
+            background: $alt-purple;
+        }
+        &.open {
+            &:before {
+                content: "";
+                display: block;
+                width: 0; 
+                height: 0; 
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid $purple;
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &[data-target="logbook"]:before {
+                border-bottom: 10px solid $alt-purple;
+            }
+        }
+        
+    }
+}
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+.help {
+    display: none;
+    height: 100%;
+    width: 100%;
+    max-width: 30em;
+    background: $darkblue;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: scroll;
+    z-index: 999;
+    padding: 0.5em 1em 8rem 1em;
+    color: white;
+    h2 {
+        color: white;
+        background: $purple;
+        display: inline-block;
+        position: relative;
+        padding: 0.5em 2rem 0.5em 1rem;
+        margin-left: -1rem;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 10px solid $darkblue;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    &.logbook h2 {
+        background: $alt-purple;
+    }
+    h3 {
+        color: rgba(255,255,255,0.6);
+    }
+}
+
+.hint {
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 3px;
+    padding: 0.5em 1em 0.5em 80px;
+    line-height: 1.4;
+    &:before {
+        letter-spacing: 1px;
+        background: rgba(255,255,255,0.3);
+        color: #fff;
+        content: "Hint!";
+        font-weight: 600;
+        display: block;
+        width: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        padding: 0.5em 0;
+    }
+}
