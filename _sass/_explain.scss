@@ -21,6 +21,7 @@
     font-size: 1.6em;
     padding: 0.5em 0;
     &.open:after {
+        color: #fff;
         content: "\2716";
         position: absolute;
         right: 0.5em;
