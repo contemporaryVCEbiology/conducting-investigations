@@ -12,15 +12,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    @media only screen and (min-width: 64em) {
-        padding-top: 50px;
-    }
-    &.home {
-        padding-top: 0;
-    }
-}
-
 figure {
     margin: 1em 0;
 }

@@ -2,8 +2,13 @@ body {
     font-family: 'PT Sans Narrow', sans-serif;
 }
 h1 {
+    font-size: 5vw;
+    @media only screen and (min-width: 720/16*1em) {
+        font-size: 3vw;
+    }
     font-family: 'PT Mono', monospace;
     color: #d7422a;
+    text-align: center;
 }
 h2 {
     font-family: 'PT Mono', monospace;
