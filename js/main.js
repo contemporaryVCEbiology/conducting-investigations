@@ -3,7 +3,7 @@ $(document).ready(function(){
      
     $('.explain-menu-toggle').click(function(){
         if($(this).hasClass('open')){
-            $('.explain-menu-toggle, .explain-menu, .explain-menu button').removeClass('open');
+            $('.explain button, .explain-menu').removeClass('open');
             $('.overlay, .help').fadeOut();
         } else {
             $('.explain-menu-toggle, .explain-menu').addClass('open');
@@ -20,7 +20,6 @@ $(document).ready(function(){
     });
     $('.overlay').click(function(){
         $('.overlay, .help').fadeOut();
-        $('.button').removeClass('open');
-        $('.explain-menu').toggleClass('open');
+        $('.explain button, .explain-menu').removeClass('open');
     });
 });
