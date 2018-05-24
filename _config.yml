@@ -1,5 +1,4 @@
 baseurl: /conducting-investigations #e.g. /sub-site
-GA-id:  #Google analytics site id, if null analytics code won't output
 
 defaults:
   -
