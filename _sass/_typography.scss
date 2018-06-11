@@ -10,6 +10,12 @@ h1 {
     color: #d7422a;
     text-align: center;
     margin: 0 0 1rem 0;
+    &.yellow {
+        color: #FDC033;
+    }
+    &.blue {
+        color: #2473B6;
+    }
 }
 h2 {
     font-family: 'PT Mono', monospace;
